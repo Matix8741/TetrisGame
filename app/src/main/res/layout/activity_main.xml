@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/parentLayout"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mateusz.tetrisgame.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/MainActivity"
+            android:layout_weight="2">
+
+            <com.example.mateusz.tetrisgame.Board
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/BoardGame"/>
+          <!--  <com.example.mateusz.tetrisgame.GridLineView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"></LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="TURN"
+            android:background="@drawable/button_style"
+            android:onClick="Turn"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leftButton"
+            android:onClick="Left"
+            android:text="@string/left"
+            android:textSize="30dp"
+            android:background="@drawable/button_style"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/right"
+            android:textSize="30dp"
+            android:background="@drawable/button_style"
+            android:onClick="Clicker"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</LinearLayout>
